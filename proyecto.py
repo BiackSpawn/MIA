@@ -48,9 +48,8 @@ with c30:
     unsafe_allow_html=True,
     )
     st.markdown('<br></br>',unsafe_allow_html=True)
-    st.title("1. Caracterización de dominio")
     st.markdown('<br></br>',unsafe_allow_html=True)
-    st.title("2. Abstracción de datos y tareas")
+    st.title("Abstracción de datos")
     
 with st.expander("Acerca de los datos", expanded=False):
     st.write(
