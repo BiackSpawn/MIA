@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import google
 import altair as alt
+import base64
 
 alt.data_transformers.enable('default', max_rows=None)
 st.set_page_config(layout="wide", page_title="Trabajo Aplicaciones",page_icon="🎈")
@@ -22,23 +23,47 @@ def _max_width_():
 _max_width_()
 c30, c31, c32 = st.columns([2.5, 1, 3])
 with c30:
+    file_ = open("intro.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+    file2_ = open("equipo.gif", "rb")
+    contents2 = file2_.read()
+    data2_url = base64.b64encode(contents2).decode("utf-8")
+    file2_.close()
+    linea_ = open("linea.png", "rb")
+    contents3 = linea_.read()
+    data_url_linea = base64.b64encode(contents3).decode("utf-8")
+    linea_.close()
+    st.markdown(
+    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+    unsafe_allow_html=True,
+    )
+    st.markdown(
+    f'<img src="data:image/gif;base64,{data2_url}" alt="cat gif">',
+    unsafe_allow_html=True,
+    )
+    st.markdown(
+    f'<img src="data:image/gif;base64,{data_url_linea}" alt="cat gif">',
+    unsafe_allow_html=True,
+    )
+    st.markdown('<br></br>',unsafe_allow_html=True)
+    st.title("1. Caracterización de dominio")
+    st.markdown('<br></br>',unsafe_allow_html=True)
+    st.title("2. Abstracción de datos y tareas")
     
-    st.title("Proyecto Visualización")
-    st.header("Integrandes: Edgar Heredia, Alejandro García y Misael Zavala.")
 with st.expander("Acerca de los datos", expanded=False):
     st.write(
         """     
 Para este proyecto trabajaremos con los datos de venta de la empresa de logistica TonyStar, esta empresa participa en el mercado de Corrier a nivel nacional con cobertura de Arica a Punta Areas con una red de 300 sucursales generando más de 700.000 de envíos al mes.
-
 La data con la que trabajaremos se encuentra alterada por motivos de seguridad de la compañia y ninguna de los valores es real ademas esta se encuentra agrupada a nivel de regiones. 
-
 Contamos son las ventas desde 2018 a 2022 en ordenes de flete (tickets de venta por cliente) y la venta neta siguiente nivel de detalle: 
 	    """
     )
     st.image("tabla_datos.png")
     st.markdown("")
-st.markdown("")
-
+    st.markdown("")
+    
 ### Primer idioms
 
 df_ventas=pd.read_csv('datos_uc.csv',delimiter=';')
@@ -85,9 +110,10 @@ grafico1=alt.vconcat(
     g_od,
     title="Ordenes de Flete 2018 a 2022 y su Distribucion según Origen y Destino"
 )
-
+st.title("Vizualización")
+st.markdown('<br></br>',unsafe_allow_html=True)
 st.altair_chart(grafico1)
-
+st.markdown('<br></br>',unsafe_allow_html=True)
 
 ### Segundo idioms
 
@@ -159,3 +185,8 @@ grafico_2=alt.vconcat(
 )
 
 st.altair_chart(grafico_2)
+st.markdown('<br></br>',unsafe_allow_html=True)
+st.markdown('<br></br>',unsafe_allow_html=True)
+st.title("3. Marcas y canales")
+st.markdown('<br></br>',unsafe_allow_html=True)
+st.title("4. Alternativas de diseño")
