@@ -187,6 +187,4 @@ grafico_2=alt.vconcat(
 st.altair_chart(grafico_2)
 st.markdown('<br></br>',unsafe_allow_html=True)
 st.markdown('<br></br>',unsafe_allow_html=True)
-st.title("3. Marcas y canales")
-st.markdown('<br></br>',unsafe_allow_html=True)
-st.title("4. Alternativas de diseño")
+
