@@ -115,7 +115,9 @@ with st.expander("Acerca de los Fitltros", expanded=False):
 	st.write(
 		"""
 		Dentro de estas visualizaciones podras realizar distintos filtros para poder explorar como se ha comportado las ventas en Tony Starken en los ultimos 4 años.
-		en las primeras dos visualziaciones podras seleccionar tanto un periodo de tiempo para ver como se comportaron las distribuciones de Origen Destino.
+		
+		En las primeras dos visualziaciones podras seleccionar tanto un periodo de tiempo para ver como se comportaron las distribuciones de Origen Destino.
+		
 		Como tambien una combinación de Origen - Destino en particular y ver su comportamiento a lo largo del tiempo.
 
 		 """)
@@ -197,6 +199,7 @@ with st.expander("Acerca de los Fitltros", expanded=False):
 	st.write(
 		"""
 		Los filtros incluidos en esta visualización tienen como objetivo poder mostrarte como se comportan los tipos de emisiones y entregas según cada categoria, por lo que si pinchas alguna categoria podras ver las diferencia entre cada uno de nuestros clientes!!
+		
 		Pruebalo y veamos como podemos seguir creciendo enconjunto con nuestros clientes!
 		 """)
 	st.markdown("")
