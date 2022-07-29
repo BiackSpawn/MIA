@@ -109,7 +109,18 @@ grafico1=alt.vconcat(
     g_od,
     title="Ordenes de Flete 2018 a 2022 y su Distribucion según Origen y Destino"
 )
-st.title("Vizualización")
+st.title("Venta de Tony Stark 2018 a 2022")
+st.markdown('<br></br>',unsafe_allow_html=True)
+with st.expander("Acerca de los Fitltros", expanded=False):
+	st.write(
+		"""
+		Dentro de estas visualizaciones podras realizar distintos filtros para poder explorar como se ha comportado las ventas en Tony Starken en los ultimos 4 años.
+		en las primeras dos visualziaciones podras seleccionar tanto un periodo de tiempo para ver como se comportaron las distribuciones de Origen Destino.
+		Como tambien una combinación de Origen - Destino en particular y ver su comportamiento a lo largo del tiempo.
+
+		 """)
+	st.markdown("")
+    st.markdown("")
 st.markdown('<br></br>',unsafe_allow_html=True)
 st.altair_chart(grafico1)
 st.markdown('<br></br>',unsafe_allow_html=True)
@@ -183,6 +194,15 @@ grafico_2=alt.vconcat(
     title="Ordenes de Flete 2018 a 2022 según Origen, Tipo de Origen, Destino y Tipo de Entrega"
 )
 
+with st.expander("Acerca de los Fitltros", expanded=False):
+	st.write(
+		"""
+		Los filtros incluidos en esta visualización tienen como objetivo poder mostrarte como se comportan los tipos de emisiones y entregas según cada categoria, por lo que si pinchas alguna categoria podras ver las diferencia entre cada uno de nuestros clientes!!
+		Pruebalo y veamos como podemos seguir creciendo enconjunto con nuestros clientes!
+		 """)
+	st.markdown("")
+    st.markdown("")
+st.markdown('<br></br>',unsafe_allow_html=True)
 st.altair_chart(grafico_2)
 st.markdown('<br></br>',unsafe_allow_html=True)
 st.markdown('<br></br>',unsafe_allow_html=True)
