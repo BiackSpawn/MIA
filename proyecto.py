@@ -120,7 +120,6 @@ with st.expander("Acerca de los Fitltros", expanded=False):
 
 		 """)
 	st.markdown("")
-    st.markdown("")
 st.markdown('<br></br>',unsafe_allow_html=True)
 st.altair_chart(grafico1)
 st.markdown('<br></br>',unsafe_allow_html=True)
@@ -201,7 +200,7 @@ with st.expander("Acerca de los Fitltros", expanded=False):
 		Pruebalo y veamos como podemos seguir creciendo enconjunto con nuestros clientes!
 		 """)
 	st.markdown("")
-    st.markdown("")
+
 st.markdown('<br></br>',unsafe_allow_html=True)
 st.altair_chart(grafico_2)
 st.markdown('<br></br>',unsafe_allow_html=True)
